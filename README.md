@@ -1,2 +1,2 @@
 # SQL
-Hacker Rank - SQL practice solutions on MySQL
+Hacker Rank - SQL practice solution
