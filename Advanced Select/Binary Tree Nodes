@@ -1,0 +1,10 @@
+Que: 
+https://www.hackerrank.com/challenges/binary-search-tree-1
+
+Ans: 
+select N , Case
+           When N in (select DISTINCT P FROM BST) AND P IS NULL then "Root"
+           When N in (select DISTINCT P FROM BST)  then "Inner"
+           Else "Leaf"
+           End as type
+from BST order by N
