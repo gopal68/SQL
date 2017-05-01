@@ -1,0 +1,8 @@
+Que: 
+https://www.hackerrank.com/challenges/asian-population
+
+Ans: 
+SELECT SUM(CITY.POPULATION) FROM CITY 
+JOIN COUNTRY 
+ON (CITY.COUNTRYCODE =COUNTRY.CODE)
+WHERE CONTINENT = 'Asia';
