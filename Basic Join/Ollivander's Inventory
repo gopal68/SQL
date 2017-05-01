@@ -1,0 +1,12 @@
+Que: 
+https://www.hackerrank.com/challenges/harry-potter-and-wands
+
+Ans: 
+select id , age,min(coins_needed),power from ((select w.id ,p.age,w.coins_needed,w.power from wands w 
+                                                 join Wands_Property p 
+                                                   on (w.code=p.code)
+                                                   where is_evil = 0                  
+                                                  order by coins_needed) as t )
+                                        group by age,power
+                                        order by power desc,age desc
+      
