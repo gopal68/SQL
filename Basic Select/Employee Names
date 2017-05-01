@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/name-of-employees
+
+Ans: 
+SELECT NAME FROM EMPLOYEE ORDER BY NAME;
