@@ -1,0 +1,6 @@
+Que: 
+https://www.hackerrank.com/challenges/weather-observation-station-20
+
+Ans: 
+select round(lat_n,4) from(select @n := @n + 1 RowNumber, t.lat_n 
+from (select @n:=0) initvars, station t order by lat_n ) as t2 where RowNumber=(select ceil(count(*)/2) from station);
