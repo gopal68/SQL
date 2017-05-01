@@ -1,0 +1,12 @@
+Que: 
+https://www.hackerrank.com/challenges/challenges
+
+Ans: 
+select H.hacker_id , H.name ,tot from Hackers H 
+join
+
+((select hacker_id ,count(*) as tot from Challenges group by hacker_id having count(*) IN(
+select c2 from(select c2,count(*) as c3 from ((select hacker_id ,count(*) as c2 from Challenges group by hacker_id) as t2) group by c2 having c3 =1 or c2=(select max(c1) as max_occ from (select count(*) as c1 from Challenges group by hacker_id ) as t1)) as t12 )  )as t4)
+
+on ( H.hacker_id = t4.hacker_id)
+order by tot desc, H.hacker_id
