@@ -1,0 +1,7 @@
+Que: 
+https://www.hackerrank.com/challenges/contest-leaderboard
+
+Ans: 
+select S.hacker_id , H.name ,sum(max_score) as tot_score from (select hacker_id,max(score) as max_score 
+from Submissions where score > 0 group by hacker_id,challenge_id) as S join Hackers H  on(S.hacker_id =H.hacker_id) 
+group by hacker_id order by tot_score desc,hacker_id;
