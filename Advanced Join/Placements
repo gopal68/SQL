@@ -1,0 +1,14 @@
+Que: 
+https://www.hackerrank.com/challenges/placements
+
+Ans: 
+select name from ((select f.id as t1id,name,friend_id,p1.salary as s1,p2.salary as sal2  from friends f 
+join packages p1
+on ( f.id =p1.id)
+join packages p2
+on(friend_id =p2.id)
+join students s
+on (f.id=s.id)
+
+where p2.salary > p1.salary
+order by sal2 ) as final_table)
