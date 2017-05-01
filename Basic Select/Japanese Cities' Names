@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/japanese-cities-name
+
+Ans: 
+SELECT NAME from CITY where COUNTRYCODE = "JPN";
