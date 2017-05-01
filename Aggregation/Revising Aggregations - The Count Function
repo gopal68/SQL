@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/revising-aggregations-the-count-function
+
+Ans: 
+select count(name) from CITY where population > 100000;
