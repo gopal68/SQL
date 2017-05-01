@@ -1,0 +1,8 @@
+Que: 
+https://www.hackerrank.com/challenges/average-population-of-each-continent
+
+Ans: 
+SELECT continent , floor(avg(CITY.population)) FROM CITY 
+JOIN COUNTRY 
+ON (CITY.COUNTRYCODE =COUNTRY.CODE)
+group by continent
