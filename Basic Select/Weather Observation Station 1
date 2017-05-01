@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/weather-observation-station-1
+
+Ans: 
+SELECT CITY,STATE from STATION;
