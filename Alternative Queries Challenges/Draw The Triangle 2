@@ -1,0 +1,8 @@
+Que: 
+https://www.hackerrank.com/challenges/draw-the-triangle-2
+
+Ans: 
+set @i = 0;
+select repeat('* ', @i := @i + 1) 
+from information_schema.tables 
+limit 20 ;
