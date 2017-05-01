@@ -1,0 +1,9 @@
+Que: 
+https://www.hackerrank.com/challenges/the-report
+
+Ans: 
+select  if(grade > 7,Name,NULL)  , grade ,Marks     
+from students 
+join Grades
+on ( students.marks >= Min_mark and students.marks <= Max_mark ) 
+order by grade desc , Name;
