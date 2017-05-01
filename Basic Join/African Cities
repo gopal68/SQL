@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/african-cities
+
+Ans: 
+select CITY.Name from City join Country on (City.countrycode=  country.code)  where continent = "Africa";
