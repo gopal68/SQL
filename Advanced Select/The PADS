@@ -1,0 +1,7 @@
+Que: 
+https://www.hackerrank.com/challenges/the-pads
+
+Ans: 
+Select Concat(Name,"(",  substring(Occupation,1,1),")") as abc from((select Name,Occupation from OCCUPATIONS order by Name) as subtb) 
+UNION
+Select * from ((select  Concat("There are total ",count(Occupation) ," " ,lower(Occupation),"s.") as col1 from OCCUPATIONS group by Occupation order by col1) as t2)
