@@ -1,0 +1,15 @@
+Que: 
+https://www.hackerrank.com/challenges/full-score
+
+Ans: 
+select t.hacker_id ,name from(select s.hacker_id ,count(*) as c from submissions s 
+                             join Challenges  c
+                             on (s.challenge_id=c.challenge_id)
+                             join Difficulty d
+                             on (c.difficulty_level= d.difficulty_level)
+                             where s.score = d.score
+                             group by s.hacker_id 
+                             having count(*) >1 )as t 
+                       join hackers h 
+                       on (t.hacker_id = h.hacker_id)
+                       order by c desc ,hacker_id
