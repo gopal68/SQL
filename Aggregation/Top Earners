@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/earnings-of-employees
+
+Ans: 
+select months* salary as a , count(months * salary) as b from employee group by a order by a DESC LIMIT 1;
