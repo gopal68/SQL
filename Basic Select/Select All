@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/select-all-sql
+
+Ans: 
+SELECT * from CITY ;
