@@ -1,0 +1,6 @@
+Que: 
+https://www.hackerrank.com/challenges/weather-observation-station-8
+
+Ans: 
+SELECT DISTINCT CITY NAME FROM STATION WHERE SUBSTRING(CITY,1,1) IN ("A","E","I","O","U") AND SUBSTRING(CITY,LENGTH(CITY),1) 
+IN ("A","E","I","O","U");
