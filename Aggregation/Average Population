@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/average-population
+
+Ans: 
+select round(avg(population)) from CITY ;
