@@ -1,0 +1,5 @@
+Que: 
+https://www.hackerrank.com/challenges/weather-observation-station-18
+
+Ans: 
+select   round( (max(lat_n)-min(lat_n)) +(Max(long_w)-min(long_w)),4)from station ;
