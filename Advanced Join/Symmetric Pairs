@@ -1,0 +1,18 @@
+Que: 
+https://www.hackerrank.com/challenges/symmetric-pairs
+
+Ans: 
+select x1,y1 from((select 
+case 
+       when f1.X <= f1.Y then f1.x
+       when f1.X >f1.Y then  f1.y
+       end as x1,
+case 
+       when f1.X <= f1.Y then f1.y
+       when f1.X >f1.Y then  f1.x
+       end as y1,
+count(*)
+from functions f1
+group by x1,y1 
+having  count(*) > 1
+order by x1)as t1);
