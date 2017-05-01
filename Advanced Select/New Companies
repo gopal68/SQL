@@ -1,0 +1,13 @@
+Que: 
+https://www.hackerrank.com/challenges/the-company
+
+Ans: 
+select e.company_code, c.founder,
+       count(Distinct(lead_manager_code)),
+       count(Distinct(senior_manager_code)),
+       count(Distinct(manager_code)),
+       count(Distinct(employee_code))
+from employee e
+Join Company c
+on (e.company_code = c.company_code)
+group by e.company_code ,e.company_code,e.company_code,e.company_code;
